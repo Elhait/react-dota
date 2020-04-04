@@ -24,7 +24,7 @@ const useFetch = (url) => {
 
     useEffect(() => {
         fetchData();
-    }, []);
+    },);
 
     return { loading, heroes };
 };
