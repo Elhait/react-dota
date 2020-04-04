@@ -5,9 +5,8 @@ import Loader from "../components/Loader/Loader";
 
 export default ({ id, heroes, loading }) => {
     return (
-        <main>
+        <main className="heroPage">
             <div className="container">
-                <div className="heroPage">
                     {loading ? (
                         <Loader />
                     ) : (
@@ -24,7 +23,6 @@ export default ({ id, heroes, loading }) => {
                         </div>
                     )}
                 </div>
-            </div>
         </main>
     );
 };

@@ -4,62 +4,79 @@ $black: #000000
     border: 1px solid $black
     font-size: 24px
     color: rgb(147, 147, 147)
-    .top
+    display: grid
+    grid-template-areas: 'topLeft topRight topRight topRight' 'botLeft botRight botRight botRight'
+    .topLeft
+        padding: 10px
+        border: 1px solid $black
+        grid-area: topLeft
         display: grid
-        grid-template-columns: auto auto
-        justify-content: start
-        border-bottom: 1px solid $black
-        .box
-            padding: 15px
+        grid-row-gap: 20px
+        grid-template-columns: auto
+        justify-content: center
+        .title
+            font-size: 30px
+            text-align: center
+            color: #d9d9d9
             
-        .left
+        img
             max-width: 256px
             width: 100%
-            border-right: 1px solid $black
-            display: grid
-            grid-row-gap: 20px
-            grid-template-columns: auto
-            .title
-                font-size: 30px
-                text-align: center
-                color: #d9d9d9
-                
-            img
-                width: 100%
-                height: auto
-        .right
-            display: grid
-            grid-template-columns: auto
-            justify-content: center
-            grid-column-gap: 10px
-            align-items: center
-            width: 100%
-    .bot
+            height: auto
+    .topRight
+        padding: 10px
+        display: grid
+        grid-area: topRight
+        grid-template-columns: auto
+        justify-content: start
+        grid-column-gap: 10px
+        align-items: center
+        border: 1px solid $black
+    .botLeft
+        padding: 10px
+        border: 1px solid $black
+        padding: 15px
+        grid-area: botLeft
         display: grid
         grid-template-columns: auto auto
-        .left
-            border-right: 1px solid $black
-            padding: 15px
+        grid-row-gap: 10px
+        justify-content: space-around
+        .stats
             display: grid
             grid-template-columns: auto auto
-            grid-row-gap: 10px
-            .stats
+            justify-content: start
+            grid-column-gap: 10px
+            &_left
+                max-width: 65px
+                width: 65px
                 display: grid
-                grid-template-columns: auto auto
-                justify-content: start
-                grid-column-gap: 10px
-                &_left
-                    max-width: 65px
-                    width: 65px
-                    display: grid
-                    justify-content: center
-                    align-items: center
-                &_right
-                    display: grid
-                    justify-content: center
-                    align-items: center
-        .right
-            padding: 15px
-            display: grid
-            grid-row-gap: 10px
+                justify-content: center
+                align-items: center
+            &_right
+                display: grid
+                justify-content: center
+                align-items: center
+    .botRight
+        padding: 10px
+        border: 1px solid $black
+        grid-area: botRight
+        padding: 15px
+        display: grid
+        grid-row-gap: 10px
 
+
+@media screen and ( max-width: 650px )
+    .heroInfo
+        font-size: 20px
+
+@media screen and ( max-width: 600px )
+    .heroInfo
+        font-size: 20px
+        grid-template-areas: 'topLeft' 'topRight' 'botLeft' 'botRight'
+        .topRight
+            justify-content: center
+            text-align: center
+        .botRight
+            grid-template-columns: auto auto
+            grid-column-gap: 15px
+            justify-content: space-evenly
