@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
-import HeroTable from '../components/HeroTable/HeroTable'
+import React, { } from "react";
+import HeroTable from "../components/HeroTable/HeroTable";
 
-export default ({heroes,loading}) => {
+export default ({ heroes, loading }) => {
     return (
-        <HeroTable heroes={heroes} loading={loading} />
+        <main className="mainPage">
+            <HeroTable heroes={heroes} loading={loading} />
+        </main>
     );
 };

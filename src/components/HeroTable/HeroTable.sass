@@ -1,8 +1,17 @@
 .heroTable
+    padding: 0 25px
     .heroRow
         display: grid
-        grid-template-columns: auto auto auto
+        grid-template-areas: 'str agi int'
+        grid-column-gap: 35px
         .heroCol
+            &:nth-child(1)
+                grid-area: str
+            &:nth-child(2)
+                grid-area: agi
+            &:nth-child(3)
+                grid-area: int
+                
             .title
                 display: grid
                 grid-template-columns: auto auto
@@ -20,3 +29,84 @@
                 justify-content: center
                 grid-gap: 5px 
                 grid-template-columns: auto auto auto auto auto
+
+
+@media screen and ( max-width: 1500px  )
+    .heroTable
+        .heroRow
+            .heroCol
+                .heroBox
+                    grid-template-columns: auto auto auto auto
+
+@media screen and ( max-width: 1350px  )
+    .heroTable
+        .heroRow
+            .heroCol
+                .heroBox
+                    grid-template-columns: auto auto auto
+
+@media screen and ( max-width: 992px  )
+    .heroTable
+        .heroRow
+            grid-column-gap: 30px
+
+@media screen and ( max-width: 930px  )
+    .heroTable
+        .heroRow
+            grid-column-gap: 30px
+            grid-template-areas: 'str agi' 'int int'
+            .heroCol
+                &:nth-child(3)
+                    .heroBox
+                        grid-template-columns: auto auto auto auto auto auto auto auto
+                    
+                .heroBox
+                    grid-template-columns: auto auto auto auto
+
+@media screen and ( max-width: 835px  )
+    .heroTable
+        .heroRow
+            .heroCol
+                &:nth-child(3)
+                    .heroBox
+                        grid-template-columns: auto auto auto auto auto auto auto
+                    
+                .heroBox
+                    grid-template-columns: auto auto auto
+
+
+@media screen and ( max-width: 700px  )
+    .heroTable
+        .heroRow
+            grid-template-areas: 'str str' 'agi agi' 'int int'
+            .heroCol                    
+                .heroBox
+                    grid-template-columns: auto auto auto auto auto auto auto
+
+@media screen and ( max-width: 650px  )
+    .heroTable
+        .heroRow
+            .heroCol       
+                .heroBox
+                    grid-template-columns: auto auto auto auto auto auto !important
+
+@media screen and ( max-width: 600px  )
+    .heroTable
+        .heroRow
+            .heroCol               
+                .heroBox
+                    grid-template-columns: auto auto auto auto auto !important
+            
+@media screen and ( max-width: 550px  )
+    .heroTable
+        .heroRow
+            .heroCol        
+                .heroBox
+                    grid-template-columns: auto auto auto auto !important
+
+@media screen and ( max-width: 450px  )
+    .heroTable
+        .heroRow
+            .heroCol                    
+                .heroBox
+                    grid-template-columns: auto auto auto !important
