@@ -12,7 +12,6 @@ export default ({ heroes, loading }) => {
                 <div>Loading...</div>
             ) : (
                 <div>
-                    <input type="text" onChange={ this.getValueInput }></input>
                     <div className="heroRow">
                         <div className="heroCol">
                             <div className="title">
