@@ -1,0 +1,64 @@
+.heroInfo
+    margin-top: 50px
+    border: 1px solid #000000
+    font-size: 24px
+    color: rgb(147, 147, 147)
+    .top
+        display: grid
+        grid-template-columns: auto auto
+        justify-content: start
+        border-bottom: 1px solid #000000
+        .box
+            padding: 15px
+            
+        .left
+            max-width: 256px
+            width: 100%
+            border-right: 1px solid #000000
+            display: grid
+            grid-row-gap: 20px
+            grid-template-columns: auto
+            .title
+                font-size: 30px
+                text-align: center
+                color: #d9d9d9
+                
+            img
+                width: 100%
+                height: auto
+        .right
+            display: grid
+            grid-template-columns: auto
+            justify-content: center
+            grid-column-gap: 10px
+            align-items: center
+            width: 100%
+    .bot
+        display: grid
+        grid-template-columns: auto auto
+        .left
+            border-right: 1px solid #000000
+            padding: 15px
+            display: grid
+            grid-template-columns: auto auto
+            grid-row-gap: 10px
+            .stats
+                display: grid
+                grid-template-columns: auto auto
+                justify-content: start
+                grid-column-gap: 10px
+                &_left
+                    max-width: 65px
+                    width: 65px
+                    display: grid
+                    justify-content: center
+                    align-items: center
+                &_right
+                    display: grid
+                    justify-content: center
+                    align-items: center
+        .right
+            padding: 15px
+            display: grid
+            grid-row-gap: 10px
+
