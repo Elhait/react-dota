@@ -1,9 +1,10 @@
 header
     display: grid
     grid-template-columns: auto auto
+    grid-area: header
     background: url(../../media/header_bg.png)
     height: 64px
-    padding: 0 20px
+    padding: 0 25px
     align-items: center
     .logo
         display: grid
@@ -17,7 +18,34 @@ header
         span
             font-size: 30px
     nav
+        display: grid
+        justify-content: center
         .link
             color: #cecece
             font-size: 20px
             text-decoration: none
+
+
+@media screen and ( max-width: 768px )
+    header
+        .logo
+            img
+                width: 26px
+                height: 26px
+            span
+                font-size: 20px
+        nav
+            .link
+                font-size: 14px
+
+@media screen and ( max-width: 450px )
+    header
+        .logo
+            img
+                width: 20px
+                height: 20px
+            span
+                font-size: 16px
+        nav
+            .link
+                font-size: 14px

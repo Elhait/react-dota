@@ -1,6 +1,33 @@
-body
-    background: #232425
-    color: #cecece
+html
+    height: 100%
+    body
+        background: #232425
+        color: #cecece
+        min-height: 100%
+        #root
+            min-height: 100vh
+            .App
+                min-height: 100vh
+                display: grid
+                grid-template-areas: 'header' 'main' 'footer'
+                grid-template-rows: 60px auto 40px
+                main
+                    grid-area: main
+                    padding: 2.5% 0
+
+
+.btn-back
+    border: 1px solid #333333
+    border-radius: 10px
+    display: grid
+    background-color: #D5011D
+    text-decoration: none
+    color: #ffffff
+    width: 100px
+    height: 30px
+    font-size: 20px
+    justify-content: center
+    align-items: center
 
 @media screen and ( min-width: 768px )
     .container

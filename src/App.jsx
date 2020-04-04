@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { Route, Switch, BrowserRouter, HashRouter, useParams } from "react-router-dom";
+import { Route, Switch, BrowserRouter, useParams } from "react-router-dom";
 import Header from "./components/Header/Header";
 import config from "./config/config.json";
 // import HeroTable from "./components/HeroTable/HeroTable";
 import "./styles/styles.sass";
 import HomePage from "./pages/HomePage";
 import HeroPage from "./pages/HeroPage";
+import Footer from "./components/Footer/Footer";
 
 const OPENDOTA_API = config.OPENDOTA_API;
 const HERO_STATS = "/heroStats";
 
-const useFetch = url => {
+const useFetch = (url) => {
     const [heroes, setHeroes] = useState(null);
     const [loading, setLoading] = useState(true);
-    
+
     async function fetchData() {
         const response = await fetch(url);
         const json = await response.json();
@@ -37,6 +38,7 @@ function App() {
                     <Route exact path={routeCodes.HOME} component={Home} />
                     <Route exact path={routeCodes.HERO} component={Hero} />
                 </Switch>
+                <Footer />
             </BrowserRouter>
         </div>
     );
@@ -56,7 +58,7 @@ function Home() {
 }
 
 function Hero() {
-    const {id} = useParams()
+    const { id } = useParams();
     const { heroes, loading } = useFetch(OPENDOTA_API + HERO_STATS);
-    return <HeroPage id={id} heroes={heroes} loading={loading}/>;
+    return <HeroPage id={id} heroes={heroes} loading={loading} />;
 }
