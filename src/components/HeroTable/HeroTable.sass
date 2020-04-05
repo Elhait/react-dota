@@ -2,17 +2,9 @@
     padding: 0 25px
     .heroRow
         display: grid
-        // grid-template-areas: 'str agi int'
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
         grid-column-gap: 35px
-        .heroCol
-            // &:nth-child(1)
-            //     grid-area: str
-            // &:nth-child(2)
-            //     grid-area: agi
-            // &:nth-child(3)
-            //     grid-area: int
-                
+        .heroCol                
             .title
                 display: grid
                 grid-template-columns: auto auto
@@ -40,23 +32,14 @@
                     grid-column: 1/3
 
 
-@media screen and ( max-width: 992px  )
+@media screen and ( max-width: 992px )
     .heroTable
         .heroRow
             grid-column-gap: 30px
 
-// @media screen and ( max-width: 930px  )
-//     .heroTable
-//         .heroRow
-//             grid-template-areas: 'str agi' 'int int'
-
-// @media screen and ( max-width: 930px  )
-//     .heroTable
-//         .heroRow
-//             grid-template-areas: 'str agi' 'int int'
-
-
-// @media screen and ( max-width: 700px  )
-//     .heroTable
-//         .heroRow
-//             grid-template-areas: 'str str' 'agi agi' 'int int'
+@media screen and ( max-width: 880px )
+    .heroTable
+        .heroRow
+           .heroCol
+               &:nth-child(3)
+                    grid-column: 1/2
